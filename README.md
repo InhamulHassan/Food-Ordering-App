@@ -1,22 +1,23 @@
 Food Ordering App
 =================
-A Food Ordering Android application, with SQLLite as the back-end RDBMS. This app has built-in administrative access. 
+A food ordering app, uses SQLLite as the back-end RDBMS. This app has built-in administrative capabilities. 
 
 Functions:
 - General functions:
 	- User registration.
-	- View food menu.
-	- Filter food menu by price.
-	- View product details.
+	- Viewing food menu.
+	- Filtering food menu by price.
+	- Viewing product details.
 - Member functions:
 	- Login as a member.
 	- View food menu and product information.
+	- Filtering food menu by price.
 	- Place food orders.
 - Admin functions:
-	- Add new product to the menu.
+	- Add new products to the menu.
 	- Delete products from the menu.
 	- Modify product information.
-	- Confirm orders placed by members.
+	- Confirm orders placed by users.
 
 Requirements:
 - Android Studio (3.0+)
