@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context="com.cmbpizza.razor.colombopizza.AdminMenu">
+
+    <SearchView
+        android:id="@+id/adminSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:backgroundTint="@color/greyTransparent"
+        android:closeIcon="@drawable/ic_close_black_24dp"
+        android:focusable="false"
+        android:goIcon="@drawable/ic_commit_search_black_24dp"
+        android:iconifiedByDefault="false"
+        android:inputType="textCapWords"
+        android:queryHint="@string/txtSearchViewHint"
+        android:searchIcon="@drawable/ic_search_black_24dp" />
+
+    <ListView
+        android:id="@+id/adminListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/add_product_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layoutRelativeOrderCheckButton"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="6dp"
+        android:src="@drawable/ic_action_add_product"
+        app:backgroundTint="@color/pastelRed"
+        app:backgroundTintMode="src_over"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/white"
+        app:tint="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/layoutRelativeOrderCheckButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="0dp">
+
+        <LinearLayout
+            android:id="@+id/layoutLinearOrderCheckButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <Button
+                android:id="@+id/adminOrderCheckButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@drawable/admin_order_check_button_style"
+                android:gravity="center"
+                android:text="@string/txtCheckoutButton"
+                android:textAllCaps="true"
+                android:textColor="@color/white"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutRelativeOrderButtonBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layoutLinearOrderCheckButton"
+            android:layout_alignTop="@id/layoutLinearCheckoutButton"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:background="@drawable/order_counter_badge_background_style" />
+
+            <TextView
+                android:id="@+id/txtOrderButtonBadge"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

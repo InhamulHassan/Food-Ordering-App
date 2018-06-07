@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/admin_order_check_list_item_background_style">
+
+    <TextView
+        android:id="@+id/orderPriceNetTotalCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="10dp"
+        android:layout_toStartOf="@id/btnConfirmOrder"
+        android:maxWidth="330dp"
+        android:text="@string/txtOrderNetTotalPrice"
+        android:textAlignment="textStart"
+        android:textColor="@color/darkGreen"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/orderProductTitlesWithQuantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignStart="@id/productImage"
+        android:layout_below="@id/orderPriceNetTotalCheck"
+        android:layout_marginEnd="70dp"
+        android:layout_marginStart="10dp"
+        android:text="@string/txtOrderProductTitlesWithQuantities"
+        android:textAlignment="textStart"
+        android:textColor="@color/black"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/orderIdCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/orderProductTitlesWithQuantity"
+        android:layout_marginStart="10dp"
+        android:maxWidth="330dp"
+        android:text="@string/txtOrderId"
+        android:textAlignment="textStart"
+        android:textColor="@color/darkBlue"
+        android:textSize="25sp" />
+
+    <ImageButton
+        android:id="@+id/btnConfirmOrder"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/cart_item_remove_button_style"
+        android:contentDescription="@string/imgConfirmOrder"
+        android:gravity="center"
+        android:scaleType="center"
+        android:src="@drawable/ic_check_circle_black_24dp" />
+
+</RelativeLayout>

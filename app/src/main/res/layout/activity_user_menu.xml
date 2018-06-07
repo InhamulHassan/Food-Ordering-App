@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:theme="@style/Theme.AppCompat.NoActionBar"
+    tools:context="com.cmbpizza.razor.colombopizza.UserMenu">
+
+    <ViewStub
+        android:id="@+id/userGridViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/showLayout"
+        android:layout="@layout/user_grid_view" />
+
+    <ViewStub
+        android:id="@+id/userListViewStub"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inflatedId="@+id/showLayout"
+        android:layout="@layout/user_list_view" />
+
+    <SearchView
+        android:id="@+id/userSearchView"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/user_search_view_style"
+        android:drawableStart="@drawable/ic_search_black_24dp"
+        android:focusable="false"
+        android:foregroundTint="@color/white"
+        android:iconifiedByDefault="false"
+        android:inputType="textCapWords"
+        android:paddingEnd="10dp"
+        android:paddingStart="15dp"
+        android:queryHint="@string/txtSearchViewHint"
+        android:textColor="@color/black"
+        android:textColorHint="@color/white" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/filter_expensive_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/filter_cheap_fab"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="20dp"
+        android:focusable="false"
+        android:scaleType="center"
+        android:src="@drawable/ic_action_expensive_filter"
+        android:visibility="invisible"
+        app:backgroundTint="@color/pastelRed"
+        app:backgroundTintMode="src_atop"
+        app:fabSize="normal"
+        app:rippleColor="@color/white"
+        app:tint="@color/black" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/filter_cheap_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/filter_fab"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="20dp"
+        android:focusable="false"
+        android:scaleType="center"
+        android:src="@drawable/ic_action_cheap_filter"
+        android:visibility="invisible"
+        app:backgroundTint="@color/pastelGreen"
+        app:backgroundTintMode="src_over"
+        app:fabSize="normal"
+        app:rippleColor="@color/white"
+        app:tint="@color/black" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/filter_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/fab_view_switcher"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="160dp"
+        android:layout_marginEnd="20dp"
+        android:elevation="6dp"
+        android:focusable="false"
+        android:scaleType="center"
+        android:src="@drawable/ic_action_filter"
+        app:backgroundTint="@color/yellow"
+        app:backgroundTintMode="src_over"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/white"
+        app:tint="@color/black" />
+
+    <ViewSwitcher
+        android:id="@+id/fab_view_switcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layoutRelativeCheckoutButton"
+        android:layout_alignParentEnd="true">
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_view_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="6dp"
+            android:focusable="false"
+            android:scaleType="center"
+            android:src="@drawable/ic_action_list_view"
+            app:backgroundTint="@color/colorPrimaryDark"
+            app:backgroundTintMode="src_over"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/white"
+            app:tint="@color/black" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_view_grid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="80dp"
+            android:layout_marginEnd="20dp"
+            android:elevation="6dp"
+            android:focusable="false"
+            android:scaleType="center"
+            android:src="@drawable/ic_action_grid_view"
+            app:backgroundTint="@color/colorPrimary"
+            app:backgroundTintMode="src_over"
+            app:fabSize="normal"
+            app:pressedTranslationZ="12dp"
+            app:rippleColor="@color/white"
+            app:tint="@color/black" />
+    </ViewSwitcher>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/clear_cart_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/layoutRelativeCheckoutButton"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="80dp"
+        android:layout_marginStart="20dp"
+        android:elevation="6dp"
+        android:focusable="false"
+        android:scaleType="center"
+        android:src="@drawable/ic_action_clear_cart"
+        android:visibility="invisible"
+        app:backgroundTint="@color/Red"
+        app:backgroundTintMode="src_over"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="@color/white"
+        app:tint="@color/white" />
+
+
+    <RelativeLayout
+        android:id="@+id/layoutRelativeCheckoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-60dp">
+
+        <LinearLayout
+            android:id="@+id/layoutLinearCheckoutButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/userCheckoutButton"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_weight="3"
+                android:background="@drawable/user_checkout_button_style"
+                android:gravity="center"
+                android:text="@string/txtCheckoutButton"
+                android:textAllCaps="true"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutRelativeButtonBadge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/layoutLinearCheckoutButton"
+            android:layout_alignTop="@id/layoutLinearCheckoutButton"
+            android:layout_marginStart="40dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:background="@drawable/badge_counter_background_style" />
+
+            <TextView
+                android:id="@+id/txtButtonBadge"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

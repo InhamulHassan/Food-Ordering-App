@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:background="@drawable/checkout_list_item_background_style">
+
+    <ImageView
+        android:id="@+id/productImageCheckout"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/txtProductImageDescription"
+        android:foregroundGravity="fill"
+        android:scaleType="fitXY"/>
+
+    <TextView
+        android:id="@+id/productTitleCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/pastelRed"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@id/productImage"
+        android:layout_marginStart="90dp"
+        android:text="@string/txtProductTitleHint"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/productPriceTotalCheckout"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/black"
+        android:layout_below="@id/productTitleCheckout"
+        android:layout_marginStart="90dp"
+        android:text="@string/txtProductPriceHint"
+        android:textAlignment="textStart"
+        android:textSize="22sp" />
+
+    <TextView
+        android:id="@+id/productQuantityCalculationCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentStart="true"
+        android:textColor="@color/green"
+        android:layout_below="@id/productPriceTotalCheckout"
+        android:layout_marginStart="90dp"
+        android:text="@string/txtProductPriceHint"
+        android:textAlignment="textStart"
+        android:textSize="15sp" />
+
+    <ImageButton
+        android:contentDescription="@string/imgRemoveCartItem"
+        android:id="@+id/btnRemoveCartItem"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:scaleType="center"
+        android:src="@drawable/ic_remove_circle_outline_black_24dp"
+        android:background="@drawable/cart_item_remove_button_style" />
+
+    <TextView
+        android:id="@+id/productIdCheckout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/productDescription"
+        android:visibility="invisible" />
+
+</RelativeLayout>

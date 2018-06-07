@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.cmbpizza.razor.colombopizza.AdminProductView">
+
+    <ViewSwitcher
+        android:id="@+id/ViewSwitcherImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/imgMainProductImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:background="@color/colorPrimary"
+            android:contentDescription="@string/txtAddProductImage"
+            android:cropToPadding="true"
+            android:requiresFadingEdge="horizontal"
+            android:scaleType="centerCrop"
+            android:transitionName="productImageAdmin" />
+
+        <RelativeLayout
+            android:id="@+id/EditImageLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="false">
+            <ImageView
+                android:id="@+id/imgMainProductImageUpdate"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="@color/colorPrimary"
+                android:clickable="false"
+                android:contentDescription="@string/txtAddProductImage"
+                android:cropToPadding="true"
+                android:focusable="false"
+                android:requiresFadingEdge="horizontal"
+                android:scaleType="centerCrop"
+                android:transitionName="productImageAdmin" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:text="@string/imgEditPlaceholder"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_marginTop="170dp"
+                android:background="@color/greyTransparent"/>
+        </RelativeLayout>
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/ViewSwitcherTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtMainProductTitle"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/txtProductTitleHint"
+            android:textSize="30sp"
+            android:transitionName="productTitleAdmin" />
+
+        <EditText
+            android:id="@+id/txtMainProductTitleUpdate"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_background_style"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:hint=""
+            android:inputType="textCapWords"
+            android:paddingEnd="5dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:transitionName="productTitleAdmin"
+            android:typeface="normal" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/ViewSwitcherDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtMainProductDescription"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center_horizontal"
+            android:padding="5dp"
+            android:text="@string/txtProductDescriptionHint"
+            android:textSize="22sp"
+            android:transitionName="productDescriptionAdmin" />
+
+        <EditText
+            android:id="@+id/txtMainProductDescriptionUpdate"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_background_style"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:hint=""
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:padding="5dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="15dp"
+            android:singleLine="false"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:transitionName="productDescriptionAdmin"
+            android:typeface="normal" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/ViewSwitcherCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtMainProductCategory"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/txtProductCategoryHint"
+            android:textSize="20sp"
+            android:transitionName="productCategoryAdmin" />
+
+        <Spinner
+            android:id="@+id/txtMainProductCategoryUpdate"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_background_style"
+            android:entries="@array/product_category_names"
+            android:fontFamily="sans-serif"
+            android:gravity="center"
+            android:inputType="none"
+            android:paddingEnd="5dp"
+            android:paddingStart="15dp"
+            android:text="@string/txtProductCategoryHint"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:transitionName="productCategoryAdmin"
+            android:typeface="normal" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/ViewSwitcherPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtMainProductPrice"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/txtProductPriceHint"
+            android:textSize="25sp"
+            android:transitionName="productPriceAdmin" />
+
+        <EditText
+            android:id="@+id/txtMainProductPriceUpdate"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/text_background_style"
+            android:fontFamily="sans-serif"
+            android:gravity="start"
+            android:hint=""
+            android:inputType="number"
+            android:paddingEnd="5dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="normal"
+            android:transitionName="productPriceAdmin"
+            android:typeface="normal" />
+    </ViewSwitcher>
+
+    <ViewSwitcher
+        android:id="@+id/ViewSwitcherButton"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            style="?android:buttonBarStyle"
+            android:layout_gravity="bottom"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/btnEditProductDetailsAdmin"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                style="?android:buttonBarButtonStyle"
+                android:background="@drawable/admin_edit_product_button"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:text="@string/btnAdminEditProduct"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/btnDeleteProductAdmin"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                style="?android:buttonBarButtonStyle"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                android:background="@drawable/admin_delete_product_button"
+                android:gravity="center"
+                android:text="@string/btnAdminDeleteProduct"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            style="?android:buttonBarStyle"
+            android:layout_gravity="bottom"
+            android:weightSum="2">
+            <Button
+                android:id="@+id/btnUpdateProductDetailsAdmin"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                style="?android:buttonBarButtonStyle"
+                android:layout_weight="1"
+                android:background="@drawable/admin_update_product_button"
+                android:gravity="center"
+                android:text="@string/btnAdminUpdateProduct"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+            <Button
+                android:id="@+id/btnEditCancelProductDetailsAdmin"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="bottom"
+                android:layout_weight="1"
+                style="?android:buttonBarButtonStyle"
+                android:background="@drawable/admin_edit_cancel_button"
+                android:gravity="center"
+                android:text="@string/btnAdminCancelEditProduct"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+    </ViewSwitcher>
+</LinearLayout>

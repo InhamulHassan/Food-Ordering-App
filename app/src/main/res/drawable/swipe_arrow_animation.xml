@@ -1,0 +1,8 @@
+<animated-vector android:drawable="@drawable/swipe_arrows" xmlns:android="http://schemas.android.com/apk/res/android">
+    <target
+        android:name="swipe_arrow_1"
+        android:animation="@animator/swipe_arrow_animator" />
+    <target
+        android:name="swipe_arrow_2"
+        android:animation="@animator/swipe_arrow_animator_2" />
+</animated-vector>

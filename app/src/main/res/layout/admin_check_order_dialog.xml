@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="340dp"
+    android:layout_height="500dp"
+    android:layout_gravity="center"
+    android:background="@drawable/admin_check_order_background_style">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="@string/txtOrderCheckDialogLabel"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:paddingStart="5dp"
+        android:gravity="center_vertical"
+        android:paddingEnd="5dp"
+        android:background="@color/grey"/>
+    <ListView
+        android:id="@+id/adminOrderListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp"/>
+</RelativeLayout>

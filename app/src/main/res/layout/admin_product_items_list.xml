@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="100dp"
+        android:scaleType="centerCrop"
+        android:layout_height="100dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/grey"
+        android:foregroundGravity="fill"
+        android:transitionName="productImageAdmin"
+        android:contentDescription="@string/txtProductImageDescription"/>
+
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@id/productImage"
+        android:layout_marginStart="100dp"
+        android:text="@string/txtProductTitleHint"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:transitionName="productTitleAdmin" />
+
+    <TextView
+        android:id="@+id/productDescription"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignStart="@id/productImage"
+        android:layout_below="@id/productTitle"
+        android:layout_marginStart="100dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="1dp"
+        android:text="@string/txtProductDescriptionHint"
+        android:textSize="12sp"
+        android:transitionName="productDescriptionAdmin" />
+
+    <TextView
+        android:id="@+id/productCategory"
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:gravity="start|center_vertical"
+        android:layout_alignStart="@id/productImage"
+        android:layout_below="@id/productDescription"
+        android:layout_marginStart="100dp"
+        android:layout_toEndOf="@id/productImage"
+        android:padding="2dp"
+        android:text="@string/txtProductCategoryHint"
+        android:textAllCaps="true"
+        android:textSize="14sp"
+        android:transitionName="productCategoryAdmin" />
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/productDescription"
+        android:layout_marginStart="240dp"
+        android:text="@string/txtProductPriceHint"
+        android:textAlignment="textEnd"
+        android:textSize="18sp"
+        android:transitionName="productPriceAdmin"/>
+    <TextView
+        android:id="@+id/productId"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/productDescription"
+        android:visibility="invisible"/>
+
+</RelativeLayout>
