@@ -1,6 +1,6 @@
 Food Ordering App
 =================
-A food ordering app, uses SQLLite as the back-end RDBMS. This app has built-in administrative capabilities. 
+A food ordering app, uses SQLite as the back-end RDBMS. This app has built-in administrative capabilities. 
 
 Functions:
 - General functions:
